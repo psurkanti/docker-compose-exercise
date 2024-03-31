@@ -1,0 +1,15 @@
+# Docker Compose file version
+version: '3'
+# Define services
+services:
+# Web service configuration
+  web:
+  # Build configuration for the web service
+    build: ./web
+  # Port mapping for the web service
+    ports:
+      - "3000:3000" # Map host port 3000 to container port 3000
+   
+  db:
+  # Build configuration for the database service
+    build: ./db
